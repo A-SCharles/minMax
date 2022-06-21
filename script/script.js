@@ -8,14 +8,11 @@ let numbers = []
 const btnAdd = document.getElementById('add');
 btnAdd.addEventListener('click', (n) => {
     n = document.getElementById('numbers').value;
-    let i = numbers.length;
-    numbers[i] = n;
+    
+    // pushes to the end of the array
+    numbers.push(parseInt(n))
 
-    if (i >= 1) {
-        values.innerHTML += ', ';
-    }
-    values.innerHTML += numbers[i];
-    i++;
+    values.innerHTML = numbers;
     // clears input after value entered
     document.getElementById('numbers').value = '';
     document.getElementById('numbers').focus()
@@ -38,7 +35,6 @@ btnClear.addEventListener('click', () => {
     maxi.innerHTML = '';
     values.innerHTML = '';
     numbers = [];
-    i = 0;
 })
 
 // copyright
